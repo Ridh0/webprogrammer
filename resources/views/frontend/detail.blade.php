@@ -4,82 +4,81 @@
 <main>
     <article>
 
-      <!-- 
+        <!-- 
         - #MOVIE DETAIL
       -->
-<style>
-   
-</style>
-      <section class="movie-detail" style="background:linear-gradient(0deg, rgba(5, 5, 5, 0.800), rgba(5, 5, 5, 0.800)),  url('http://image.tmdb.org/t/p/w500<?php echo $area['belongs_to_collection']['backdrop_path'] ?>') no-repeat;
-      background-size: cover;
-      background-size: cover;
+        <style>
 
-  background-position: center;
-  padding-top: 160px;
-  padding-bottom: var(--section-padding);">
-        <div class="container">
+        </style>
+        <section class="movie-detail" style="background:linear-gradient(0deg, rgba(5, 5, 5, 0.800), rgba(5, 5, 5, 0.800)),  url('http://image.tmdb.org/t/p/w500<?php echo $area['backdrop_path'] ?>') no-repeat;
+            background-size: cover;
+            background-size: cover;
 
-          <figure class="movie-detail-banner">
+            background-position: center;
+            padding-top: 160px;
+            padding-bottom: var(--section-padding);">
+            <div class="container">
 
-            <img src="http://image.tmdb.org/t/p/w500{{$area['belongs_to_collection']['poster_path']}}" alt="Free guy movie poster">
+                <figure class="movie-detail-banner">
 
-            <button class="play-btn">
-              <ion-icon name="play-circle-outline"></ion-icon>
-            </button>
+                    <img src="http://image.tmdb.org/t/p/w500{{$area['poster_path']}}" alt="Free guy movie poster">
 
-          </figure>
+                    <button class="play-btn">
+                        <ion-icon name="play-circle-outline"></ion-icon>
+                    </button>
 
-          <div class="movie-detail-content">
+                </figure>
 
-            <p class="detail-subtitle">{{$area['belongs_to_collection']['name']}}</p>
+                <div class="movie-detail-content">
 
-            <h1 class="h1 detail-title">
-                {{$area['original_title']}}
-            </h1>
 
-            <div class="meta-wrapper">
+                    <h1 class="h1 detail-title">
+                        {{$area['original_title']}}
+                    </h1>
 
-              <div class="badge-wrapper">
-                <div class="badge badge-fill">PG {{($area['adult']=="false")? "13" : "18+"}}</div>
+                    <div class="meta-wrapper">
 
-                <div class="badge badge-outline">HD</div>
-              </div>
+                        <div class="badge-wrapper">
+                            <div class="badge badge-fill">PG {{($area['adult']=="false")? "13" : "18+"}}</div>
 
-              <div class="ganre-wrapper">
-                @foreach($area['genres'] as $key => $value)
-                <a href="#">{{$value['name']}}</a>
-              @endforeach
-              </div>
+                            <div class="badge badge-outline">HD</div>
+                        </div>
 
-              <div class="date-time">
+                        <div class="ganre-wrapper">
+                            @foreach($area['genres'] as $key => $value)
+                            <a href="#">{{$value['name']}}</a>
+                            @endforeach
+                        </div>
 
-                <div>
-                  <ion-icon name="calendar-outline"></ion-icon>
+                        <div class="date-time">
 
-                  <time datetime="2021">{{$area['release_date']}}</time>
+                            <div>
+                                <ion-icon name="calendar-outline"></ion-icon>
+
+                                <time datetime="2021">{{$area['release_date']}}</time>
+                            </div>
+
+                            <div>
+                                <ion-icon name="time-outline"></ion-icon>
+
+                                <time datetime="PT115M">{{$area['runtime']}} min</time>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <p class="storyline">
+                        {{$area['overview']}}
+                    </p>
+
+
                 </div>
-
-                <div>
-                  <ion-icon name="time-outline"></ion-icon>
-
-                  <time datetime="PT115M">{{$area['runtime']}} min</time>
-                </div>
-
-              </div>
 
             </div>
-
-            <p class="storyline">
-            {{$area['overview']}}
-            </p>
-
-
-          </div>
-
-        </div>
-      </section>
+        </section>
 
     </article>
-  </main>
+</main>
 
 @endsection

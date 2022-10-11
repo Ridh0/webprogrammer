@@ -36,8 +36,8 @@
 
             <div class="overlay" data-overlay></div>
 
-            <a href="" class=" ">
-                <h2 class="text-white">logo</h2>
+            <a href="{{route('home')}}" class="logo">
+            <img src="{{asset('tampilanfilm/assets/images/Untitled.png')}}" width="40%" alt="Filmlane logo">
             </a>
 
             <div class="header-actions">
@@ -56,7 +56,7 @@
 
                             <a href="{{route('login')}}" class="btn btn-primary">Sign in</a>
 
-                       
+
                         </div>
                     </div>
 
@@ -157,29 +157,7 @@
                 <div class="footer-brand-wrapper">
 
 
-                    <ul class="footer-list">
 
-                        <li>
-                            <a href="tampilanfilmindex.html" class="footer-link">Home</a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="footer-link">Movie</a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="footer-link">TV Show</a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="footer-link">Web Series</a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="footer-link">Pricing</a>
-                        </li>
-
-                    </ul>
 
                 </div>
 

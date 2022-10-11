@@ -652,6 +652,11 @@ body.active { overflow: hidden; }
   border-bottom: 1px dashed hsla(0, 0%, 100%, 0.1);
   margin-bottom: 30px;
 }
+.service-list > li:second-child {
+  padding-bottom: 20px;
+  border-bottom: 1px dashed hsla(0, 0%, 100%, 0.1);
+  margin-bottom: 30px;
+}
 
 .service-card .card-icon {
   color: var(--white);
@@ -1131,6 +1136,7 @@ body.active { overflow: hidden; }
    */
 
   .service-list > li:first-child { padding-bottom: 30px; }
+  .service-list > li:second-child { padding-bottom: 30px; }
 
   .service-card {
     display: flex;
@@ -1419,7 +1425,16 @@ body.active { overflow: hidden; }
     align-items: center;
     gap: 70px;
   }
+  .service .email-field { margin-bottom: 0; }
 
+  .service  .email-field {
+    color: var(--eerie-black);
+    font-size: var(--fs-9);
+    padding: 18px 32px;
+    border-radius: 4px;
+    box-shadow: 0 3px 4px hsla(0, 0%, 0%, 0.2);
+    margin-bottom: 15px;
+  }
   .service-content {
     padding-inline: 0;
     width: calc(100% - 470px);

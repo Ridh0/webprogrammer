@@ -54,7 +54,11 @@
 
                 <div class="flex-wrapper">
 
-                  
+                <div class="title-wrapper">
+              <p class="section-subtitle">Kategori</p>
+
+              <h2 class="h2 section-title">Popular Movie</h2>
+            </div>
 
                 </div>
 
@@ -70,7 +74,7 @@
                             </a>
 
                             <div class="title-wrapper">
-                                <a href="{{asset('tampilanfilmmovie-details.html')}}">
+                                <a href="{{route('home.detail',$value['id'])}}">
                                     <h3 class="card-title">{{$value['original_title']}}</h3>
                                 </a>
 

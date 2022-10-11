@@ -17,14 +17,14 @@
                     <li>
                         <div class="movie-card">
 
-                            <a href="{{asset('tampilanfilmmovie-details.html')}}">
+                            <a href="{{route('home.detail',$value['id'])}}">
                                 <figure class="card-banner">
                                     <img src="http://image.tmdb.org/t/p/w500{{$value['backdrop_path']}}" alt="Sonic the Hedgehog 2 movie poster">
                                 </figure>
                             </a>
 
                             <div class="title-wrapper">
-                                <a href="{{asset('tampilanfilmmovie-details.html')}}">
+                                <a href="{{route('home.detail',$value['id'])}}">
                                     <h3 class="card-title">{{$value['original_title']}}</h3>
                                 </a>
 
